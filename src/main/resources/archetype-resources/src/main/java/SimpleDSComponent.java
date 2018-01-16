@@ -19,12 +19,10 @@
 package ${package};
 
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Service;
-
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
+import org.osgi.service.component.annotations.Component;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,9 +31,9 @@ import org.slf4j.LoggerFactory;
  *
  * @see <a href="https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html">Scheduler Service</a>
  */
-@Component
-@Service
-@Property( name="scheduler.period", longValue = 10)
+@Component( property = {
+    "scheduler.period:Long=10"
+})
 public class SimpleDSComponent implements Runnable {
     
     private Logger logger = LoggerFactory.getLogger(this.getClass());
