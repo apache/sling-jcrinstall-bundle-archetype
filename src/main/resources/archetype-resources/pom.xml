@@ -60,7 +60,7 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.sling</groupId>
-                <artifactId>maven-sling-plugin</artifactId>
+                <artifactId>sling-maven-plugin</artifactId>
                 <version>${slingplugin.version}</version>
                 <configuration>
                     <slingUrl>http://localhost:8080/dav/default/libs/sling/install</slingUrl>
@@ -145,7 +145,7 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.sling</groupId>
-                        <artifactId>maven-sling-plugin</artifactId>
+                        <artifactId>sling-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>install-bundle</id>
